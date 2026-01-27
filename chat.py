@@ -150,7 +150,7 @@ st.markdown("""
 
 # ------------------ Title ------------------
 st.markdown("<div class='chat-container'>", unsafe_allow_html=True)
-st.title("🤖 AI Chat")
+st.title("🤖 Bot@HospitalDesk")
 
 # ------------------ Session State ------------------
 if "messages" not in st.session_state:
