@@ -4,8 +4,9 @@ custom rag application
 ---
 
 ## tech stack used
+- uv
 - streamlit
-- langchain + ollama
+- langchain + ollama (local AI setup)
 - llama3.2:3b (chat model)
 - chromaDB (vector store)
 - nomic-embed-text:v1.5 (embedding model)
@@ -104,3 +105,10 @@ Takes 3–4 hours after approval.
 END OF DOCUMENT
 
 ```
+---
+## vector store
+used chromadb for storing embeddings or data chunks.
+```
+uv add langchain-chroma
+```
+## requirements
