@@ -112,3 +112,6 @@ used chromadb for storing embeddings or data chunks.
 uv add langchain-chroma
 ```
 ## requirements
+```
+uv pip install -r requirements.txt
+```
