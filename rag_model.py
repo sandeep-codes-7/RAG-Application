@@ -11,11 +11,11 @@ from langchain_core.output_parsers import StrOutputParser
 
 # warnings.filterwarnings('ignore',message="*.libmagic.*")
 
+# from chat import user_prompt
 
 model = ChatOllama(
     model="llama3.2:3b",
     validate_model_on_init=True,
-    temperature=1
 )
 
 
@@ -102,10 +102,14 @@ chain = (
     | StrOutputParser()
 )
 
-response = chain.invoke("hi")
+# response = chain.invoke("hi")
 
-print(response)
+# print(response)
 
-# res = model.invoke(messages)
 
-# print(res.content)
+# def get_res():
+#     print(response)
+# # res = model.invoke(messages)
+
+# # print(res.content)
+# get_res()
