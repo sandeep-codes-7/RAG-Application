@@ -1,5 +1,5 @@
 # RAG-Application
-custom rag application
+Custom RAG application for hospital desk assistance
 
 ---
 
@@ -7,9 +7,9 @@ custom rag application
 - uv
 - streamlit
 - langchain + ollama (local AI setup)
-- llama3.2:3b (chat model)
+- `llama3.2:3b` (chat model)
 - chromaDB (vector store)
-- nomic-embed-text:v1.5 (embedding model)
+- `nomic-embed-text:v1.5` (embedding model)
 
 ---
 
@@ -106,12 +106,59 @@ END OF DOCUMENT
 
 ```
 ---
+## Python Version
+```
+Python 3.11
+```
+---
 ## vector store
 used chromadb for storing embeddings or data chunks.
 ```
 uv add langchain-chroma
 ```
 ## requirements
-```
+```commandline
 uv pip install -r requirements.txt
 ```
+---
+## Ollama setup:
+- visit Official website of Ollama and download Ollama onto your local system.
+- Once, it is installed, verify the installation in the terminal:
+```commandline
+ollama --version
+```
+- this should return the version of ollama that you installed.
+- Open Ollama.exe, Go to settings, enable `expose to network` button.
+## Model selection:
+- This is totally depends on your system configuration.
+- As per my system config, I've installed llama3.2:3b to use as a chat model.
+```commandline
+ollama run llama3.2:3b
+
+```
+- If you have any other preferences, you can use them.
+## Embedding model:
+- I've used nomic-embed-text:v1.5 as an embedding model.
+```commandline
+ollama run nomic-embed-text:v1.5
+```
+- You can choose your own embedding model
+## Activate Ollama server:
+- Go to your terminal, and type this command:
+```commandline
+ollama serve
+```
+- this will start a server at localhost:11434
+- if you visit this address, you can see the message that says `ollama is running`
+
+---
+# running the chatbot
+- open the terminal in the project folder where you can find the `chat.py`.
+- now, run the following command:
+```commandline
+streamlit run chat.py
+```
+- And, that's it.
+- now, you can see the terminal, says your app is running at `localhost:8501`
+- finally, your bot is ready to chat.
+![screenshot](./screenshots/interface.png)
