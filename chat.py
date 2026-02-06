@@ -22,7 +22,6 @@ model = ChatOllama(
 )
 
 
-
 # print("perfect")
 
 loader = TextLoader("context.txt",encoding="utf8")
